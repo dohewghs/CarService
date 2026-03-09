@@ -14,6 +14,8 @@ namespace CarService
             this.volume = _volume;
             this.type = _type;
         }
+
+        public double GetVolume() => this.volume;
     }
 
     internal enum EngineType

@@ -22,6 +22,10 @@ namespace CarService
             this.year = _year;
             this.basePrice = _basePrice;
         }
-        
+
+
+        public Engine GetEngine() => this.engine;
+        public double GetBasePrice() => this.basePrice;
+        public int GetYear() => this.year;
     }
 }
