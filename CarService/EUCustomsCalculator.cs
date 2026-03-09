@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarService
 {
-    internal class USCustomsCalculator : ICustomsCalculator
+    internal class EUCustomsCalculator : ICustomsCalculator
     {
         private const double fixedCustoms = 15;
         private const double ecoTaxCoefitient = 0.15;
