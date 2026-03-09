@@ -12,8 +12,16 @@ namespace CarService
         private double basePrice;
 
         private Engine engine;
+
+        public Vehicle(Engine _engine, string _brand = "", string _model = "", int _year = 0, double _basePrice = 0)
+        {
+            this.engine = _engine;
+
+            this.brand = _brand;
+            this.model = _model;
+            this.year = _year;
+            this.basePrice = _basePrice;
+        }
         
     }
-
-    
 }
