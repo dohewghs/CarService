@@ -13,7 +13,7 @@ namespace CarService
 
         private Engine engine;
 
-        public Vehicle(Engine _engine, string _brand = "", string _model = "", int _year = 0, double _basePrice = 0)
+        public Vehicle(string _brand = "", string _model = "", int _year = 0, double _basePrice = 0, Engine _engine = null)
         {
             this.engine = _engine;
 
