@@ -16,6 +16,8 @@ namespace CarService
         }
 
         public double GetVolume() => this.volume;
+
+        public override string ToString() => $"{volume}|{type}";
     }
 
     internal enum EngineType
