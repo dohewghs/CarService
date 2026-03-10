@@ -13,5 +13,16 @@ namespace CarService
         {
             this.loadCapacity = _loadCapacity;
         }
+
+        public override string ToFileString()
+        {
+            return base.ToFileString() + $"|{loadCapacity}";
+        }
+        protected override void MakeFrom(string[] parts)
+        {
+            base.MakeFrom(parts);
+
+            this.loadCapacity = double.Parse(parts[7]);
+        }
     }
 }
