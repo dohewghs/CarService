@@ -1,12 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace CarService
 {
     internal class Menu
     {
-        public static void Run()
+        private List<Vehicle> vehicles;
+
+        public Menu()
+        {
+            this.vehicles = new List<Vehicle>();
+        }
+        public Menu(List<Vehicle> vehicles)
+        {
+            this.vehicles = vehicles;
+        }
+
+        public void Run()
         {
             bool isRunning = true;
 
@@ -21,10 +33,10 @@ namespace CarService
                         // перехід до вибору авто
                         break;
                     case 2:
-                        //додати машину до датасету
+                        AddCarFromInput();
                         break;
                     case 3:
-                        //показати датасет
+                        ShowDataSet();
                         break;
                     case 4:
                         isRunning = false;
@@ -78,6 +90,34 @@ namespace CarService
             return (value >= low && value <= upp);
         }
 
+        private void AddCarFromInput()
+        {
+            Vehicle temp;
+            Console.WriteLine("Enter type of vehicle (car, truck, mixed): ");
+            string type = Console.ReadLine();
 
+            switch (type.ToLower())
+            {
+                case "car":
+                    temp = new Car();
+                    break;
+                case "truck":
+                    temp = new Truck();
+                    break;
+                case "mixed":
+                    temp = new MixedVehicle();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        private void ShowDataSet()
+        {
+            foreach (Vehicle vehicle in this.vehicles)
+            {
+                Console.WriteLine(vehicle);
+            }
+        }
     }
 }
