@@ -54,7 +54,6 @@ namespace CarService
             Console.WriteLine("3. Show dataset.");
             Console.WriteLine("4. Close program.");
         }
-
         private static int InputOptionInRange(int low, int upp)
         {
             while (true)
@@ -70,7 +69,6 @@ namespace CarService
             }
 
         }
-
         private static int ReadInt(string text)
         {
             while (true)
@@ -85,6 +83,25 @@ namespace CarService
                 Console.WriteLine("Invalid input. Enter a number");
             }
         }
+        private static double ReadDouble(string text)
+        {
+            while (true)
+            {
+                Console.Write(text);
+                string input = Console.ReadLine();
+                double value;
+                if (double.TryParse(input, out value))
+                {
+                    return value;
+                }
+                Console.WriteLine("Invalid input. Enter a number");
+            }
+        }
+        private static string ReadString(string text)
+        {
+            Console.Write(text);
+            return Console.ReadLine() ?? "";
+        }
         private static bool IsInInterval(int value, int low, int upp)
         {
             return (value >= low && value <= upp);
@@ -92,26 +109,39 @@ namespace CarService
 
         private void AddCarFromInput()
         {
-            Vehicle temp;
-            Console.WriteLine("Enter type of vehicle (car, truck, mixed): ");
-            string type = Console.ReadLine();
+            Console.WriteLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
 
-            switch (type.ToLower())
+            string line = Console.ReadLine();
+
+            string[] parts = line.Split('|');
+
+            Vehicle vehicle;
+
+            switch (parts[0].ToLower())
             {
                 case "car":
-                    temp = new Car();
+                    vehicle = new Car();
                     break;
                 case "truck":
-                    temp = new Truck();
+                    vehicle = new Truck();
                     break;
                 case "mixed":
-                    temp = new MixedVehicle();
+                    vehicle = new MixedVehicle();
                     break;
                 default:
+                    vehicle = null;
                     break;
             }
 
+            if (vehicle == null)
+                throw new Exception("Unspecified car type");
+
+            vehicle.Read(parts);
+
+            this.vehicles.Add(vehicle);
         }
+
+        
         private void ShowDataSet()
         {
             foreach (Vehicle vehicle in this.vehicles)
