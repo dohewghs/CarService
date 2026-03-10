@@ -8,7 +8,7 @@ namespace CarService
     {
         private const double exciseCoefitient = 1.0;
         private const double percentForCustoms = 0.2;
-        override public double CalculateCustoms(Vehicle vehicle)
+        public double CalculateCustoms(Vehicle vehicle)
         {
             int currentYear = DateTime.Now.Year;
 
@@ -18,9 +18,9 @@ namespace CarService
 
             double vehicleEngineVolume = vehicle.GetEngine().GetVolume();
 
-            double excise = this.exciseCoefitient * vehicleEngineVolume * vehicleAge;
+            double excise = exciseCoefitient * vehicleEngineVolume * vehicleAge;
 
-            double customs = vehicle.GetBasePrice() * this.percentForCustoms;
+            double customs = vehicle.GetBasePrice() * percentForCustoms;
 
             double tax = 0.2 * (vehicle.GetBasePrice() + excise + customs);
 

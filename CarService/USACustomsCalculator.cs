@@ -9,7 +9,7 @@ namespace CarService
         private const double fixedFee = 25.0; // Фіксований збір за оформлення
         private const double ecoTaxCoefficient = 0.12;  // Наприклад, для США це Gas Guzzler Tax
         private const double salesTaxRate = 0.07;       // Середній податок з продажу (ПДВ)
-        double CalculateCustoms(Vehicle vehicle)
+        public double CalculateCustoms(Vehicle vehicle)
         {
             double dutyRate = vehicle switch
             {
