@@ -4,12 +4,12 @@ using System.Text;
 
 namespace CarService
 {
-    internal class MixedVehicle
+    internal class MixedVehicle : Vehicle
     {
         double loadCapacity;
 
         public MixedVehicle(string _brand = "", string _model = "", int _year = 0, double _basePrice = 0, double _loadCapacity, Engine _engine = null) :
-            base(_engine, _brand, _model, _year, _basePrice)
+            base(_brand, _model, _year, _basePrice, _engine)
         {
             this.loadCapacity = _loadCapacity;
         }
