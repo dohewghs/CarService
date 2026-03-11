@@ -30,7 +30,7 @@ namespace CarService
                 switch (option)
                 {
                     case 1:
-                        // перехід до вибору авто
+                        //CarSelection();
                         break;
                     case 2:
                         AddCarFromInput();
