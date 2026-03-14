@@ -22,7 +22,7 @@ namespace CarService
         {
             Console.WriteLine(message);
         }
-        public string ReadLine(string message)
+        public string ReadLine()
         {
             return Console.ReadLine();
         }
