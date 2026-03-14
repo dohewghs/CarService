@@ -15,8 +15,7 @@ namespace CarService
         private EngineType engineType;
 
         private IView view;
-        private IUserController userController;
-        public Filters()
+        public Filters(IView _view)
         {
             this.brand = string.Empty;
             this.model = string.Empty;
@@ -25,8 +24,7 @@ namespace CarService
             this.engVolumeInterval = new Interval(1000, 2000);
             this.engineType = EngineType.petrol;
 
-            this.view = new ViewToConsole();
-            this.userController = new ConsoleUserController();
+            this.view = _view;
         }
 
         public void ShowFilters(string text)
@@ -67,7 +65,7 @@ namespace CarService
 
             this.view.WriteLine("1. Brand \n2. Model\n3. Year\n4. Engine type\n5. Engine volume\n6. Price");
 
-            int option = Reader.InputOptionInRange(1, 6);
+            int option = this.view.InputOptionInRange(1, 6);
 
             switch (option)
             {
@@ -103,33 +101,58 @@ namespace CarService
         private void EnterModel()
         {
             this.view.Write("Enter model: ");
-            this.model = this.userController.ReadLine();
-        }
-        private void EnterYear()
-        {
-            this.view.WriteLine("Enter Interval: ");
-            string str = this.userController.ReadLine();
-            string[] parts = str.Split(' ');
-            this.yearInterval.Lower = int.Parse(parts[0]);
-            this.yearInterval.Upper = int.Parse(parts[1]);
+            this.model = this.view.ReadLine();
         }
         private void EnterEngineType()
         {
             this.view.Write("Enter engine type: ");
-            this.engineType = Enum.Parse<EngineType>(Console.ReadLine());
+            this.engineType = Enum.Parse<EngineType>(this.view.ReadLine());
         }
+
+        private void EnterInterval(string name, Interval interval)
+        {
+            this.view.WriteLine($"Current {name}: {interval.Lower}-{interval.Upper}");
+
+            this.view.Write($"Enter new interval: ");
+            string str = this.view.ReadLine();
+
+            string[] parts = str.Split();
+
+            int low, high;
+            if (parts.Length == 2 &&
+                int.TryParse(parts[0], out low) &&
+                int.TryParse(parts[1], out high)
+                )
+            {
+                interval.Lower = low;
+                interval.Upper = high;
+            }
+            else
+            {
+                this.view.WriteLine("Format error! Please enter two numbers separated by space.");
+            }
+        }
+        private void EnterYear()
+        {
+            this.view.Write("Enter Interval: ");
+            string str = this.view.ReadLine();
+            string[] parts = str.Split(' ');
+            this.yearInterval.Lower = int.Parse(parts[0]);
+            this.yearInterval.Upper = int.Parse(parts[1]);
+        }
+        
         private void EnterVolume()
         {
-            this.view.WriteLine("Enter Interval: ");
-            string str = Console.ReadLine();
+            this.view.Write("Enter Interval: ");
+            string str = this.view.ReadLine();
             string[] parts = str.Split(' ');
             this.engVolumeInterval.Lower = int.Parse(parts[0]);
             this.engVolumeInterval.Upper = int.Parse(parts[1]);
         }
         private void EnterPrice()
         {
-            this.view.WriteLine("Enter Interval: ");
-            string str = Console.ReadLine();
+            this.view.Write("Enter Interval: ");
+            string str = this.view.ReadLine();
             string[] parts = str.Split(' ');
             this.priceInterval.Lower = int.Parse(parts[0]);
             this.priceInterval.Upper = int.Parse(parts[1]);
