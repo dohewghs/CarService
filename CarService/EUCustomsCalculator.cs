@@ -11,7 +11,7 @@ namespace CarService
         private const double taxCoefitient = 0.2;
         public double CalculateCustoms(Vehicle vehicle)
         {
-            double ecoTax = vehicle.GetEngine().GetVolume() * ecoTaxCoefitient;
+            double ecoTax = vehicle.Engine.Volume * ecoTaxCoefitient;
 
             double subTotal = ecoTax + fixedCustoms;
 

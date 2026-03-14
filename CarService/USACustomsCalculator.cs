@@ -19,11 +19,11 @@ namespace CarService
                 _ => 0.05           
             };
 
-            double importTax = dutyRate * vehicle.GetBasePrice();
+            double importTax = dutyRate * vehicle.BasePrice;
 
-            double ecoTax = vehicle.GetEngine().GetVolume() * ecoTaxCoefficient;
+            double ecoTax = vehicle.BasePrice * ecoTaxCoefficient;
 
-            double taxableBase = vehicle.GetBasePrice() + importTax + ecoTax + fixedFee;
+            double taxableBase = vehicle.BasePrice + importTax + ecoTax + fixedFee;
 
             double salesTax = taxableBase * salesTaxRate;
 

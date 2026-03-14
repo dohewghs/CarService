@@ -12,17 +12,17 @@ namespace CarService
         {
             int currentYear = DateTime.Now.Year;
 
-            int vehicleAge = currentYear - vehicle.GetYear();
+            int vehicleAge = currentYear - vehicle.Year;
             if (vehicleAge <= 0)
                 vehicleAge = 1;
 
-            double vehicleEngineVolume = vehicle.GetEngine().GetVolume();
+            double vehicleEngineVolume = vehicle.Engine.GetVolume();
 
             double excise = exciseCoefitient * vehicleEngineVolume * vehicleAge;
 
-            double customs = vehicle.GetBasePrice() * percentForCustoms;
+            double customs = vehicle.BasePrice * percentForCustoms;
 
-            double tax = 0.2 * (vehicle.GetBasePrice() + excise + customs);
+            double tax = 0.2 * (vehicle.BasePrice + excise + customs);
 
             return excise + customs + tax;
         }
