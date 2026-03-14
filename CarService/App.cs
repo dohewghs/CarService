@@ -57,16 +57,20 @@ namespace CarService
             this.view.WriteLine("3. Show dataset.");
             this.view.WriteLine("4. Close program.");
         }
-
         private void AddCarFromInput()
         {
-            this.view.WriteLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
+            string line = this.view.ReadLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
 
-            string line = Console.ReadLine();
+            try
+            {
+                Vehicle vehicle = VehicleFactory.Create(line);
 
-            Vehicle vehicle = MakeVehicle(line);
-
-            this.vehicleService.Add(vehicle);
+                this.vehicleService.Add(vehicle);
+            }
+            catch (Exception ex)
+            {
+                this.view.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         private void ShowDataSet()
