@@ -8,8 +8,8 @@ namespace CarService
 {
     internal interface IView
     {
-        void Write(string text);
-        void WriteLine(string text);
-        void Clear();
+        string GetUserInput(string message);
+        void DisplayMessage(string text);
+        void DisplayVehicles(List<Vehicle> vehicles);
     }
 }
