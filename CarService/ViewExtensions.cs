@@ -29,7 +29,7 @@ namespace CarService
             while (true)
             {
                 view.Write(text);
-                string input = view.ReadLine("");
+                string input = view.ReadLine();
                 int value;
                 if (int.TryParse(input, out value))
                 {
@@ -38,7 +38,5 @@ namespace CarService
                 view.WriteLine("Invalid input. Enter a number");
             }
         }
-
-
     }
 }
