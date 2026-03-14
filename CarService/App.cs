@@ -59,7 +59,8 @@ namespace CarService
         }
         private void AddCarFromInput()
         {
-            string line = this.view.ReadLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
+            this.view.Write("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) : ");
+            string line = this.view.ReadLine();
 
             try
             {
