@@ -20,6 +20,6 @@ Truck|Mercedes-Benz|Actros|2021|115000|12800|diesel|22000
 Truck|DAF|XF|2017|65000|12900|diesel|19000
 Truck|IVECO|Stralis|2016|48000|11000|diesel|15000
 Truck|Renault|T-Range|2019|78000|11000|diesel|21000
-Truck|Isuzu|NPR|2015|25000|5200|diesel|5000
+Truck|Isuzu|NPR|2015|25000|52100|diesel|5000
 Truck|Ford|F-750|2022|95000|6700|diesel|12000
 Truck|Mitsubishi|Fuso|2018|32000|4900|diesel|6500

@@ -31,7 +31,7 @@ namespace CarService
 
         public virtual string ToUIString()
         {
-            return $"{Brand} {Model} {Year} {BasePrice} {Engine.ToUIString()}";
+            return $"{Brand} {Model} {Year} {BasePrice}$ {Engine.ToUIString()}";
         }
         public void Read(string[] parts)
         {

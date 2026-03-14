@@ -1,0 +1,1134 @@
+﻿{
+  "Version": 3,
+  "AreNodeDescriptionsVisible": true,
+  "ContainerNodes": [
+    {
+      "Id": 1,
+      "ZIndex": 0,
+      "Name": "CarService",
+      "FullyQualifiedName": "CarService",
+      "Stereotype": "Namespace",
+      "ToolTip": "namespace CarService\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-428.5534,-907.4017",
+      "Size": "936.8156,1146.3303",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}"
+      ],
+      "NamespaceLevel": 1
+    }
+  ],
+  "LeafNodes": [
+    {
+      "Id": 2,
+      "ParentId": 1,
+      "ZIndex": 1,
+      "Name": "Car",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Car\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-396.9147,-196.5637",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Car\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Car",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 3,
+      "ParentId": 1,
+      "ZIndex": 2,
+      "Name": "CarSelection",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.CarSelection\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-193.9567,-400.8442",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.CarSelection",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 4,
+      "ParentId": 1,
+      "ZIndex": 3,
+      "Name": "Engine",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Engine\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-124.8438,-282.0987",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Engine\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Engine",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 5,
+      "ParentId": 1,
+      "ZIndex": 4,
+      "Name": "EngineType",
+      "Stereotype": "Enum",
+      "ToolTip": "enum CarService.EngineType\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-133.7242,-180.047",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"EngineType\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "enum CarService.EngineType",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 6,
+      "ParentId": 1,
+      "ZIndex": 5,
+      "Name": "EUCustomsCalculator",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.EUCustomsCalculator\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "351.1861,-412.4382",
+      "MemberAreaSize": "136.69,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"EUCustomsCalculator\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.EUCustomsCalculator",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 7,
+      "ParentId": 1,
+      "ZIndex": 6,
+      "Name": "Filters",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Filters\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-1.6171,-401.7872",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Filters",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 8,
+      "ParentId": 1,
+      "ZIndex": 7,
+      "Name": "ICustomsCalculator",
+      "Stereotype": "Interface",
+      "ToolTip": "interface CarService.ICustomsCalculator\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "288.0651,-547.7833",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"ICustomsCalculator\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "interface CarService.ICustomsCalculator",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": true,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 9,
+      "ParentId": 1,
+      "ZIndex": 8,
+      "Name": "Interval",
+      "Stereotype": "Struct",
+      "ToolTip": "struct CarService.Interval\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "47.5412,-277.1468",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Interval\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "struct CarService.Interval",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 10,
+      "ParentId": 1,
+      "ZIndex": 9,
+      "Name": "ISurchargeStrategy",
+      "Stereotype": "Interface",
+      "ToolTip": "interface CarService.ISurchargeStrategy\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "117.8879,-548.4937",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"ISurchargeStrategy\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "interface CarService.ISurchargeStrategy",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": true,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 11,
+      "ParentId": 1,
+      "ZIndex": 10,
+      "Name": "Menu",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Menu\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-390.255,-403.285",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Menu\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Menu",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 12,
+      "ParentId": 1,
+      "ZIndex": 11,
+      "Name": "MixedVehicle",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.MixedVehicle\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-400.7511,-99.2905",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"MixedVehicle\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.MixedVehicle",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 13,
+      "ZIndex": 12,
+      "Name": "Program",
+      "Stereotype": "Class",
+      "ToolTip": "class Program\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-607.2131,-508.7706",
+      "MemberAreaSize": "132,0",
+      "IsPinned": false,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Program\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}"
+      ],
+      "FullName": "class Program",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 14,
+      "ParentId": 1,
+      "ZIndex": 13,
+      "Name": "Reader",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Reader\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-363.07,-699.8758",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Reader\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Reader",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 15,
+      "ParentId": 1,
+      "ZIndex": 14,
+      "Name": "SurchargeStrategyPercent",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.SurchargeStrategyPercent\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "104.6967,-680.9479",
+      "MemberAreaSize": "161.39,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"SurchargeStrategyPercent\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.SurchargeStrategyPercent",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 16,
+      "ParentId": 1,
+      "ZIndex": 15,
+      "Name": "Truck",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Truck\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-411.2472,4.507",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Truck\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Truck",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 17,
+      "ParentId": 1,
+      "ZIndex": 16,
+      "Name": "UACustomsCalculator",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.UACustomsCalculator\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "343.7756,-258.2982",
+      "MemberAreaSize": "137.3533,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"UACustomsCalculator\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.UACustomsCalculator",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 18,
+      "ParentId": 1,
+      "ZIndex": 17,
+      "Name": "USACustomsCalculator",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.USACustomsCalculator\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "350.2184,-336.8541",
+      "MemberAreaSize": "145.3567,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"USACustomsCalculator\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.USACustomsCalculator",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 19,
+      "ParentId": 1,
+      "ZIndex": 18,
+      "Name": "Vehicle",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.Vehicle\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-324.7369,-280.5805",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"Vehicle\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.Vehicle",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 47,
+      "ParentId": 1,
+      "ZIndex": 46,
+      "Name": "ViewToConsole",
+      "Stereotype": "Class",
+      "ToolTip": "class CarService.ViewToConsole\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-61.8418,-655.4357",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"ViewToConsole\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "class CarService.ViewToConsole",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": false,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    },
+    {
+      "Id": 48,
+      "ParentId": 1,
+      "ZIndex": 47,
+      "Name": "IView",
+      "Stereotype": "Interface",
+      "ToolTip": "interface CarService.IView\r\nassembly: CarService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Position": "-61.8418,-550.4229",
+      "MemberAreaSize": "132,0",
+      "IsPinned": true,
+      "Symbols": [
+        "{\"K\":\"NamedType\",\"N\":\"IView\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}"
+      ],
+      "FullName": "interface CarService.IView",
+      "Description": "",
+      "IsDescriptionVisible": true,
+      "IsAbstract": true,
+      "IsStatic": false,
+      "Accessibility": "Internal",
+      "Origin": "SourceCode",
+      "IsDisposable": false
+    }
+  ],
+  "Connectors": [
+    {
+      "Id": 20,
+      "SourceId": 2,
+      "TargetId": 19,
+      "ZIndex": 19,
+      "Stereotype": "Inheritance",
+      "RoutePoints": [
+        [
+          -309.43748565109991,
+          -196.56372887188161,
+          true
+        ],
+        [
+          -280.21407887387431,
+          -230.580507997802,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 21,
+      "SourceId": 3,
+      "TargetId": 8,
+      "ZIndex": 20,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -61.956700000000012,
+          -395.96358141625308,
+          true
+        ],
+        [
+          288.06511432018738,
+          -502.66392060287092,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 23,
+      "SourceId": 3,
+      "TargetId": 10,
+      "ZIndex": 22,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -75.155223394164963,
+          -400.8442,
+          true
+        ],
+        [
+          131.08638382425522,
+          -498.49374527598786,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 25,
+      "SourceId": 12,
+      "TargetId": 19,
+      "ZIndex": 24,
+      "Stereotype": "Inheritance",
+      "RoutePoints": [
+        [
+          -324.26868314979686,
+          -99.290520739762769,
+          true
+        ],
+        [
+          -269.2192848974546,
+          -230.580507997802,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 26,
+      "SourceId": 15,
+      "TargetId": 10,
+      "ZIndex": 25,
+      "Stereotype": "Implementation",
+      "RoutePoints": [
+        [
+          185.10782647088016,
+          -630.94794527598788,
+          true
+        ],
+        [
+          184.17169438930031,
+          -548.49374527598786,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 27,
+      "SourceId": 4,
+      "TargetId": 5,
+      "ZIndex": 26,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -61.019277220633015,
+          -232.0987,
+          true
+        ],
+        [
+          -65.548766332533148,
+          -180.04702751015705,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 29,
+      "SourceId": 17,
+      "TargetId": 8,
+      "ZIndex": 28,
+      "Stereotype": "Implementation",
+      "RoutePoints": [
+        [
+          407.40997778747743,
+          -258.29824384946846,
+          true
+        ],
+        [
+          359.10744675254278,
+          -497.78330201912394,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 30,
+      "SourceId": 6,
+      "TargetId": 8,
+      "ZIndex": 29,
+      "Stereotype": "Implementation",
+      "RoutePoints": [
+        [
+          407.43869158967357,
+          -412.43824699880969,
+          true
+        ],
+        [
+          366.15754049634461,
+          -497.78330201912394,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 31,
+      "SourceId": 7,
+      "TargetId": 9,
+      "ZIndex": 30,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          74.242938278320324,
+          -351.78722352690079,
+          true
+        ],
+        [
+          103.68121644569177,
+          -277.14680088890685,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 33,
+      "SourceId": 16,
+      "TargetId": 19,
+      "ZIndex": 32,
+      "Stereotype": "Inheritance",
+      "RoutePoints": [
+        [
+          -337.66087646106877,
+          4.507033944227544,
+          true
+        ],
+        [
+          -266.32317047210023,
+          -230.580507997802,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 34,
+      "SourceId": 18,
+      "TargetId": 8,
+      "ZIndex": 33,
+      "Stereotype": "Implementation",
+      "RoutePoints": [
+        [
+          414.73862260521014,
+          -336.85406476464055,
+          true
+        ],
+        [
+          362.22325948080811,
+          -497.78330201912394,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 35,
+      "SourceId": 7,
+      "TargetId": 5,
+      "ZIndex": 34,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          49.488544312789855,
+          -351.78722352690079,
+          true
+        ],
+        [
+          -52.82988156727329,
+          -180.04702751015705,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 37,
+      "SourceId": 11,
+      "TargetId": 19,
+      "ZIndex": 36,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -310.90624375315264,
+          -353.28497507359782,
+          true
+        ],
+        [
+          -272.08564540762154,
+          -280.580507997802,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 39,
+      "SourceId": 19,
+      "TargetId": 4,
+      "ZIndex": 38,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -192.73687885072627,
+          -256.08177018037406,
+          true
+        ],
+        [
+          -124.84377089642146,
+          -256.59741029362823,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 41,
+      "SourceId": 11,
+      "TargetId": 3,
+      "ZIndex": 40,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -258.25501031004796,
+          -377.46433783874983,
+          true
+        ],
+        [
+          -193.95666942839614,
+          -376.66485885895531,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 43,
+      "SourceId": 3,
+      "TargetId": 19,
+      "ZIndex": 42,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -155.14280177848769,
+          -350.84422162410732,
+          true
+        ],
+        [
+          -231.55074650063463,
+          -280.580507997802,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 45,
+      "SourceId": 3,
+      "TargetId": 7,
+      "ZIndex": 44,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -61.956700000000026,
+          -376.16779197345346,
+          true
+        ],
+        [
+          -1.6170937013172733,
+          -376.46363155344733,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 49,
+      "SourceId": 3,
+      "TargetId": 48,
+      "ZIndex": 48,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -105.87554103394294,
+          -400.8442,
+          true
+        ],
+        [
+          -17.922982657784623,
+          -500.42293872399318,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 51,
+      "SourceId": 47,
+      "TargetId": 48,
+      "ZIndex": 50,
+      "Stereotype": "Implementation",
+      "RoutePoints": [
+        [
+          4.1581763082724592,
+          -605.43571008361869,
+          true
+        ],
+        [
+          4.1581763082724592,
+          -550.42293872399318,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 52,
+      "SourceId": 11,
+      "TargetId": 48,
+      "ZIndex": 51,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          -268.45477961558879,
+          -403.285,
+          true
+        ],
+        [
+          -51.64204407613876,
+          -500.42293872399318,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    },
+    {
+      "Id": 54,
+      "SourceId": 7,
+      "TargetId": 48,
+      "ZIndex": 53,
+      "Stereotype": "Association",
+      "RoutePoints": [
+        [
+          54.253320365962658,
+          -401.78722352690073,
+          true
+        ],
+        [
+          14.287762240992548,
+          -500.42293872399318,
+          true
+        ]
+      ],
+      "IsCreatedFromModelItem": true
+    }
+  ],
+  "Labels": [
+    {
+      "Id": 22,
+      "ConnectorId": 21,
+      "ZIndex": 21,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "91.2433,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "customsCalculator",
+          "Tooltip": "private ICustomsCalculator customsCalculator",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"customsCalculator\",\"C\":{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 24,
+      "ConnectorId": 23,
+      "ZIndex": 23,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "surcharge",
+          "Tooltip": "private ISurchargeStrategy surcharge",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"surcharge\",\"C\":{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 28,
+      "ConnectorId": 27,
+      "ZIndex": 27,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "Type",
+          "Tooltip": "public EngineType Type { get; private set; }",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Property\",\"N\":\"Type\",\"C\":{\"K\":\"NamedType\",\"N\":\"Engine\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 32,
+      "ConnectorId": 31,
+      "ZIndex": 31,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "91.8167,40.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "yearInterval",
+          "Tooltip": "private Interval yearInterval",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"yearInterval\",\"C\":{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        },
+        {
+          "TextColumn1": "",
+          "TextColumn2": "priceInterval",
+          "Tooltip": "private Interval priceInterval",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"priceInterval\",\"C\":{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        },
+        {
+          "TextColumn1": "",
+          "TextColumn2": "engVolumeInterval",
+          "Tooltip": "private Interval engVolumeInterval",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"engVolumeInterval\",\"C\":{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 36,
+      "ConnectorId": 35,
+      "ZIndex": 35,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "60.7,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "engineType",
+          "Tooltip": "private EngineType engineType",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"engineType\",\"C\":{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 38,
+      "ConnectorId": 37,
+      "ZIndex": 37,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "*",
+          "TextColumn2": "vehicles",
+          "Tooltip": "private List<Vehicle> vehicles",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"vehicles\",\"C\":{\"K\":\"NamedType\",\"N\":\"Menu\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 40,
+      "ConnectorId": 39,
+      "ZIndex": 39,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "Engine",
+          "Tooltip": "public Engine Engine { get; private set; }",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Property\",\"N\":\"Engine\",\"C\":{\"K\":\"NamedType\",\"N\":\"Vehicle\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 42,
+      "ConnectorId": 41,
+      "ZIndex": 41,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "64.0233,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "carSelection",
+          "Tooltip": "private CarSelection carSelection",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"carSelection\",\"C\":{\"K\":\"NamedType\",\"N\":\"Menu\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 44,
+      "ConnectorId": 43,
+      "ZIndex": 43,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "79.0433,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "choosenVehicle",
+          "Tooltip": "private Vehicle choosenVehicle",
+          "CanBeHidden": false,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"choosenVehicle\",\"C\":{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 46,
+      "ConnectorId": 45,
+      "ZIndex": 45,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "filters",
+          "Tooltip": "private Filters filters",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"filters\",\"C\":{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 50,
+      "ConnectorId": 49,
+      "ZIndex": 49,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "view",
+          "Tooltip": "private IView view",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"view\",\"C\":{\"K\":\"NamedType\",\"N\":\"CarSelection\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 53,
+      "ConnectorId": 52,
+      "ZIndex": 52,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "view",
+          "Tooltip": "private IView view",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"view\",\"C\":{\"K\":\"NamedType\",\"N\":\"Menu\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    },
+    {
+      "Id": 55,
+      "ConnectorId": 54,
+      "ZIndex": 54,
+      "AnchorKind": "End",
+      "AnchorVector": "0,0",
+      "Size": "56,17.5",
+      "IsPinned": false,
+      "Entries": [
+        {
+          "TextColumn1": "",
+          "TextColumn2": "view",
+          "Tooltip": "private IView view",
+          "CanBeHidden": true,
+          "Symbol": "{\"K\":\"Field\",\"N\":\"view\",\"C\":{\"K\":\"NamedType\",\"N\":\"Filters\",\"C\":{\"K\":\"Namespace\",\"N\":\"CarService\",\"C\":{\"K\":\"Assembly\",\"N\":\"CarService\",\"V\":\"1.0.0.0\"}}}}"
+        }
+      ]
+    }
+  ]
+}

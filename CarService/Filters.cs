@@ -13,6 +13,9 @@ namespace CarService
         private Interval priceInterval;
         private Interval engVolumeInterval;
         private EngineType engineType;
+
+        private IView view;
+        private IUserController userController;
         public Filters()
         {
             this.brand = string.Empty;
@@ -21,17 +24,20 @@ namespace CarService
             this.priceInterval = new Interval(0, 5000);
             this.engVolumeInterval = new Interval(1000, 2000);
             this.engineType = EngineType.petrol;
+
+            this.view = new ViewToConsole();
+            this.userController = new ConsoleUserController();
         }
 
         public void ShowFilters(string text)
         {
-            Console.WriteLine(text);
-            Console.WriteLine($"Brand: {this.brand}");
-            Console.WriteLine($"Model: {this.model}");
-            Console.WriteLine($"Year: {this.yearInterval.Lower}-{this.yearInterval.Upper}");
-            Console.WriteLine($"Engine type: {this.engineType}");
-            Console.WriteLine($"Engine volume: {this.engVolumeInterval.Lower}-{this.engVolumeInterval.Upper}" );
-            Console.WriteLine($"Price: {this.priceInterval.Lower}-{this.priceInterval.Upper}");
+            this.view.WriteLine(text);
+            this.view.WriteLine($"Brand: {this.brand}");
+            this.view.WriteLine($"Model: {this.model}");
+            this.view.WriteLine($"Year: {this.yearInterval.Lower}-{this.yearInterval.Upper}");
+            this.view.WriteLine($"Engine type: {this.engineType}");
+            this.view.WriteLine($"Engine volume: {this.engVolumeInterval.Lower}-{this.engVolumeInterval.Upper}" );
+            this.view.WriteLine($"Price: {this.priceInterval.Lower}-{this.priceInterval.Upper}");
         }
 
         public bool IsSuitable(Vehicle vehicle)
@@ -57,9 +63,9 @@ namespace CarService
         }
         public void Change()
         {
-            Console.Clear();
+            this.view.Clear();
 
-            Console.WriteLine("1. Brand \n2. Model\n3. Year\n4. Engine type\n5. Engine volume\n6. Price");
+            this.view.WriteLine("1. Brand \n2. Model\n3. Year\n4. Engine type\n5. Engine volume\n6. Price");
 
             int option = Reader.InputOptionInRange(1, 6);
 
@@ -90,31 +96,31 @@ namespace CarService
 
         private void EnterBrand()
         {
-            Console.Write("Enter Brand: ");
+            this.view.Write("Enter Brand: ");
 
             this.brand = new string(Console.ReadLine());
         }
         private void EnterModel()
         {
-            Console.Write("Enter model: ");
-            this.model = Console.ReadLine();
+            this.view.Write("Enter model: ");
+            this.model = this.userController.ReadLine();
         }
         private void EnterYear()
         {
-            Console.WriteLine("Enter Interval: ");
-            string str = Console.ReadLine();
+            this.view.WriteLine("Enter Interval: ");
+            string str = this.userController.ReadLine();
             string[] parts = str.Split(' ');
             this.yearInterval.Lower = int.Parse(parts[0]);
             this.yearInterval.Upper = int.Parse(parts[1]);
         }
         private void EnterEngineType()
         {
-            Console.Write("Enter engine type: ");
+            this.view.Write("Enter engine type: ");
             this.engineType = Enum.Parse<EngineType>(Console.ReadLine());
         }
         private void EnterVolume()
         {
-            Console.WriteLine("Enter Interval: ");
+            this.view.WriteLine("Enter Interval: ");
             string str = Console.ReadLine();
             string[] parts = str.Split(' ');
             this.engVolumeInterval.Lower = int.Parse(parts[0]);
@@ -122,7 +128,7 @@ namespace CarService
         }
         private void EnterPrice()
         {
-            Console.WriteLine("Enter Interval: ");
+            this.view.WriteLine("Enter Interval: ");
             string str = Console.ReadLine();
             string[] parts = str.Split(' ');
             this.priceInterval.Lower = int.Parse(parts[0]);
