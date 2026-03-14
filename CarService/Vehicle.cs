@@ -6,33 +6,33 @@ namespace CarService
 {
     internal class Vehicle
     {
-        private string brand;
-        private string model;
-        private int year;
-        private double basePrice;
+        public string Brand { get; private set; }
+        public string Model { get; private set; }
+        public int Year { get; private set; }
+        public double BasePrice { get; private set; }
 
-        private Engine engine;
+        public Engine Engine { get; private set; }
 
         public Vehicle(string _brand = "", string _model = "", int _year = 0, double _basePrice = 0, Engine _engine = null)
         {
-            this.engine = _engine;
+            this.Engine = _engine;
 
-            this.brand = _brand;
-            this.model = _model;
-            this.year = _year;
-            this.basePrice = _basePrice;
+            this.Brand = _brand;
+            this.Model = _model;
+            this.Year = _year;
+            this.BasePrice = _basePrice;
         }
 
-
-        public Engine GetEngine() => this.engine;
-        public double GetBasePrice() => this.basePrice;
-        public int GetYear() => this.year;
 
         public virtual string ToFileString()
         {
-            return $"{brand}|{model}|{year}|{basePrice}|{engine}";
+            return $"{Brand}|{Model}|{Year}|{BasePrice}|{Engine}";
         }
 
+        public virtual string ToUIString()
+        {
+            return $"{Brand} {Model} {Year} {BasePrice} {Engine.ToUIString()}";
+        }
         public void Read(string[] parts)
         {
             if (parts.Length < 7)
@@ -40,20 +40,19 @@ namespace CarService
 
             MakeFrom(parts);
         }
-
         protected virtual void MakeFrom(string[] parts)
         {
-            this.brand = parts[1];
-            this.model = parts[2];
-            this.year = int.Parse(parts[3]);
-            this.basePrice = double.Parse(parts[4]);
+            this.Brand = parts[1];
+            this.Model = parts[2];
+            this.Year = int.Parse(parts[3]);
+            this.BasePrice = double.Parse(parts[4]);
 
             double engineVolume = double.Parse(parts[5]);
             EngineType engineType = (EngineType)Enum.Parse(typeof(EngineType), parts[6]);
 
             Engine _engine = new Engine(engineVolume, engineType);
             
-            this.engine = _engine;
+            this.Engine = _engine;
         }
     }
 }
