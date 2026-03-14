@@ -134,28 +134,16 @@ namespace CarService
         }
         private void EnterYear()
         {
-            this.view.Write("Enter Interval: ");
-            string str = this.view.ReadLine();
-            string[] parts = str.Split(' ');
-            this.yearInterval.Lower = int.Parse(parts[0]);
-            this.yearInterval.Upper = int.Parse(parts[1]);
+            this.EnterInterval("Year", this.yearInterval);
         }
         
         private void EnterVolume()
         {
-            this.view.Write("Enter Interval: ");
-            string str = this.view.ReadLine();
-            string[] parts = str.Split(' ');
-            this.engVolumeInterval.Lower = int.Parse(parts[0]);
-            this.engVolumeInterval.Upper = int.Parse(parts[1]);
+            this.EnterInterval("Engine volume", this.engVolumeInterval);
         }
         private void EnterPrice()
         {
-            this.view.Write("Enter Interval: ");
-            string str = this.view.ReadLine();
-            string[] parts = str.Split(' ');
-            this.priceInterval.Lower = int.Parse(parts[0]);
-            this.priceInterval.Upper = int.Parse(parts[1]);
+            this.EnterInterval("Price", this.priceInterval);
         }
     }
 }
