@@ -11,33 +11,41 @@ namespace CarService
     {
         private List<bool> suitableVehicles;
         private Vehicle choosenVehicle;
+        private Filters filters;
+
+        public CarSelection()
+        {
+            suitableVehicles = new List<bool>();
+            choosenVehicle = null;
+            filters = new Filters();
+        }
         public void Run(List<Vehicle> list)
         {
-            this.suitableVehicles = new List<bool>(list.Count);
-
             bool isRunning = true;
             while (isRunning)
             {
-                ShowChoosenVehicle(this.choosenVehicle);
-                ShowFilters();
-                ShowOption();
-                ShowList(list);
+                Console.Clear();
+                MakeAvailableList(list);
 
-                Console.SetCursorPosition(Console.GetCursorPosition().Left - list.Count, 0);
-                int option = InputOptionInRange(1, 4);
+                ShowChoosenVehicle(this.choosenVehicle);
+                filters.ShowFilters("Filters: ");
+                ShowAvailableCars(list);
+                ShowOption();
+
+                int option = Reader.InputOptionInRange(0, 3);
 
                 switch (option)
                 {
+                    case 0:
+                        isRunning = false;
+                        break;
                     case 1:
-
+                        filters.Change();
                         break;
                     case 2:
-
+                        ChooseVehicle(list);
                         break;
                     case 3:
-                        
-                        break;
-                    case 4:
 
                         break;
                     default:
@@ -46,11 +54,21 @@ namespace CarService
 
             }
         }
+        private void MakeAvailableList(List<Vehicle> list)
+        {
+            this.suitableVehicles.Clear();
+            this.suitableVehicles = new List<bool>(list.Count+1);
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                bool isSuitable = filters.IsSuitable(list[i]);
+                this.suitableVehicles.Add(isSuitable);
+            }
+        }
         private void ShowChoosenVehicle(Vehicle vehicle)
         {
             Console.Write("Choosen vehicle: ");
-            string? vehicleText = (vehicle == null) ? "" : vehicle.ToString();
+            string? vehicleText = (vehicle == null) ? "" : vehicle.ToUIString();
 
             Console.WriteLine(vehicleText);
         }
@@ -58,49 +76,35 @@ namespace CarService
         {
             Console.WriteLine("1. Change filters.");
             Console.WriteLine("2. Choose car.");
-            Console.WriteLine("3. Calculate full price.");
-            Console.WriteLine("4. Go back.");
+            Console.WriteLine("3. CalculatePrice.");
+            Console.WriteLine("0. Go back.");
         }
-
-        private void ShowList(List<Vehicle> list)
+        private void ShowAvailableCars(List<Vehicle> list)
         {
-            for(int i=0; i<list.Count; ++i)
+            for (int i = 0; i < list.Count; ++i)
             {
-                Console.WriteLine(i + "." + list[i].ToString());
-            }
-        }
-        private static int InputOptionInRange(int low, int upp)
-        {
-            while (true)
-            {
-                int value = ReadInt("Your option: ");
-
-                if (IsInInterval(value, low, upp))
+                if (this.suitableVehicles[i])
                 {
-                    return value;
+                    Console.WriteLine(i + "." + list[i].ToUIString());
+
                 }
-
-                Console.WriteLine($"Enter a number in [{low}, {upp}]");
             }
-
         }
-        private static int ReadInt(string text)
+        private void ChooseVehicle(List<Vehicle> list)
         {
-            while (true)
+            int index = Reader.ReadInt("Enter index of car you want: ");
+
+            if (index < 0 || index >= list.Count)
             {
-                Console.Write(text);
-                string input = Console.ReadLine();
-                int value;
-                if (int.TryParse(input, out value))
-                {
-                    return value;
-                }
-                Console.WriteLine("Invalid input. Enter a number");
+                return;
             }
-        }
-        private static bool IsInInterval(int value, int low, int upp)
-        {
-            return (value >= low && value <= upp);
+
+            if (!this.suitableVehicles[index])
+            {
+                return;
+            }
+
+            this.choosenVehicle = list[index];
         }
     }
 }
