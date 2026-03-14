@@ -16,16 +16,14 @@ namespace CarService
         private ISurchargeStrategy surcharge;
         private ICustomsCalculator customsCalculator;
         private IView view;
-        public CarSelection()
+        public CarSelection(IView _view, ICustomsCalculator _calculator, ISurchargeStrategy _surcharge)
         {
-            suitableVehicles = new List<bool>();
-            choosenVehicle = null;
-            filters = new Filters();
+            this.view = _view;
+            this.customsCalculator = _calculator;
+            this.surcharge = _surcharge;
 
-            surcharge = new SurchargeStrategyPercent();
-            customsCalculator = new UACustomsCalculator();
-
-            view = new ViewToConsole();
+            this.suitableVehicles = new List<bool>();
+            this.filters = new Filters(_view); 
         }
         public void Run(List<Vehicle> list)
         {
@@ -41,7 +39,7 @@ namespace CarService
                 ShowAvailableCars(list);
                 ShowOption();
 
-                int option = Reader.InputOptionInRange(0, 3);
+                int option = this.view.InputOptionInRange(0, 3);
 
                 switch (option)
                 {
@@ -53,7 +51,6 @@ namespace CarService
                         break;
                     case 2:
                         ChooseVehicle(list);
-                        
                         break;
                     case 3:
                         FinalPrice();
@@ -102,7 +99,7 @@ namespace CarService
         }
         private void ChooseVehicle(List<Vehicle> list)
         {
-            int index = Reader.ReadInt("Enter index of car you want: ");
+            int index = this.view.ReadInt("Enter index of car you want: ");
 
             if (index < 0 || index >= list.Count)
             {
@@ -122,13 +119,19 @@ namespace CarService
             if (this.choosenVehicle == null)
                 return;
 
-            this.view.Write($"The final price of {this.choosenVehicle.Brand} {this.choosenVehicle.Model} {this.choosenVehicle.Year} is ");
+            double customs = this.customsCalculator.CalculateCustoms(this.choosenVehicle);
+            double extraFromSeller = this.surcharge.CalculateSurcharge(this.choosenVehicle);
+            double total = choosenVehicle.BasePrice + customs + extraFromSeller;
 
-            double finalPrice = this.choosenVehicle.BasePrice + 
-                this.customsCalculator.CalculateCustoms(choosenVehicle) +
-                this.surcharge.CalculateSurcharge(choosenVehicle);
+            this.view.WriteLine("---Total Price---");
+            this.view.WriteLine($"{this.choosenVehicle.Brand} {this.choosenVehicle.Model} {this.choosenVehicle.Year}");
+            this.view.WriteLine($"Base price: {this.choosenVehicle.BasePrice}");
+            this.view.WriteLine($"Customs: {customs}");
+            this.view.WriteLine($"Surcharge: {extraFromSeller}");
+            this.view.WriteLine($"Total is {total}");
 
-            this.view.WriteLine(finalPrice + "$");
+            this.view.WriteLine("\nPress enter to continue...");
+            this.view.ReadLine();
         }
     }
 }
