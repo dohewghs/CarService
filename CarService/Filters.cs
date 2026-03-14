@@ -116,12 +116,12 @@ namespace CarService
         private void EnterEngineType()
         {
             this.view.Write("Enter engine type: ");
-            this.engineType = Enum.Parse<EngineType>(this.userController.ReadLine());
+            this.engineType = Enum.Parse<EngineType>(Console.ReadLine());
         }
         private void EnterVolume()
         {
             this.view.WriteLine("Enter Interval: ");
-            string str = this.userController.ReadLine();
+            string str = Console.ReadLine();
             string[] parts = str.Split(' ');
             this.engVolumeInterval.Lower = int.Parse(parts[0]);
             this.engVolumeInterval.Upper = int.Parse(parts[1]);
@@ -129,7 +129,7 @@ namespace CarService
         private void EnterPrice()
         {
             this.view.WriteLine("Enter Interval: ");
-            string str = this.userController.ReadLine();
+            string str = Console.ReadLine();
             string[] parts = str.Split(' ');
             this.priceInterval.Lower = int.Parse(parts[0]);
             this.priceInterval.Upper = int.Parse(parts[1]);

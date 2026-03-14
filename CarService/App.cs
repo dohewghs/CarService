@@ -5,16 +5,17 @@ using System.Text;
 
 namespace CarService
 {
-    internal class Menu
+    internal class App
     {
         private List<Vehicle> vehicles;
         private CarSelection carSelection;
-        public Menu()
+        private IView view;
+        public App(IView _view, VehicleService _service, CarSelection _selection)
         {
-            this.vehicles = new List<Vehicle>();
-            this.carSelection = new CarSelection();
+            this.carSelection = _selection;
+            this.view = _view;
         }
-        public Menu(List<Vehicle> vehicles)
+        public App(List<Vehicle> vehicles)
         {
             this.vehicles = vehicles;
             this.carSelection = new CarSelection();
@@ -36,11 +37,12 @@ namespace CarService
                 switch (option)
                 {
                     case 1:
-                        Console.Clear();
+                        this.view.Clear();
                         this.carSelection.Run(this.vehicles);
                         break;
                     case 2:
                         AddCarFromInput();
+                        this.view.Clear();
                         break;
                     case 3:
                         ShowDataSet();
@@ -58,7 +60,7 @@ namespace CarService
         {
             if (!File.Exists(filePath))
             {
-                Console.WriteLine("File not found!");
+                this.view.WriteLine("File not found!");
                 return;
             }
 
@@ -70,16 +72,16 @@ namespace CarService
                 this.vehicles.Add(vehicle);
             }
         }
-        private static void ShowOptions()
+        private void ShowOptions()
         {
-            Console.WriteLine("1. Go to car selection.");
-            Console.WriteLine("2. Add vehicle to dataset.");
-            Console.WriteLine("3. Show dataset.");
-            Console.WriteLine("4. Close program.");
+            this.view.WriteLine("1. Go to car selection.");
+            this.view.WriteLine("2. Add vehicle to dataset.");
+            this.view.WriteLine("3. Show dataset.");
+            this.view.WriteLine("4. Close program.");
         }
         private void AddCarFromInput()
         {
-            Console.WriteLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
+            this.view.WriteLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
 
             string line = Console.ReadLine();
 
@@ -122,7 +124,7 @@ namespace CarService
         {
             foreach (Vehicle vehicle in this.vehicles)
             {
-                Console.WriteLine(vehicle.ToUIString());
+                this.view.WriteLine(vehicle.ToUIString());
             }
         }
     }

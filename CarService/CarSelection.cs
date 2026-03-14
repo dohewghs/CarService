@@ -13,18 +13,27 @@ namespace CarService
         private Vehicle choosenVehicle;
         private Filters filters;
 
+        private ISurchargeStrategy surcharge;
+        private ICustomsCalculator customsCalculator;
+        private IView view;
         public CarSelection()
         {
             suitableVehicles = new List<bool>();
             choosenVehicle = null;
             filters = new Filters();
+
+            surcharge = new SurchargeStrategyPercent();
+            customsCalculator = new UACustomsCalculator();
+
+            view = new ViewToConsole();
         }
         public void Run(List<Vehicle> list)
         {
             bool isRunning = true;
             while (isRunning)
             {
-                Console.Clear();
+                this.view.Clear();
+
                 MakeAvailableList(list);
 
                 ShowChoosenVehicle(this.choosenVehicle);
@@ -44,9 +53,10 @@ namespace CarService
                         break;
                     case 2:
                         ChooseVehicle(list);
+                        
                         break;
                     case 3:
-
+                        FinalPrice();
                         break;
                     default:
                         break;
@@ -67,17 +77,17 @@ namespace CarService
         }
         private void ShowChoosenVehicle(Vehicle vehicle)
         {
-            Console.Write("Choosen vehicle: ");
+            this.view.Write("Choosen vehicle: ");
             string? vehicleText = (vehicle == null) ? "" : vehicle.ToUIString();
 
-            Console.WriteLine(vehicleText);
+            this.view.WriteLine(vehicleText);
         }
         private void ShowOption()
         {
-            Console.WriteLine("1. Change filters.");
-            Console.WriteLine("2. Choose car.");
-            Console.WriteLine("3. CalculatePrice.");
-            Console.WriteLine("0. Go back.");
+            this.view.WriteLine("1. Change filters.");
+            this.view.WriteLine("2. Choose car.");
+            this.view.WriteLine("3. CalculatePrice.");
+            this.view.WriteLine("0. Go back.");
         }
         private void ShowAvailableCars(List<Vehicle> list)
         {
@@ -85,7 +95,7 @@ namespace CarService
             {
                 if (this.suitableVehicles[i])
                 {
-                    Console.WriteLine(i + "." + list[i].ToUIString());
+                    this.view.WriteLine(i + "." + list[i].ToUIString());
 
                 }
             }
@@ -105,6 +115,20 @@ namespace CarService
             }
 
             this.choosenVehicle = list[index];
+        }
+
+        private void FinalPrice()
+        {
+            if (this.choosenVehicle == null)
+                return;
+
+            this.view.Write($"The final price of {this.choosenVehicle.Brand} {this.choosenVehicle.Model} {this.choosenVehicle.Year} is ");
+
+            double finalPrice = this.choosenVehicle.BasePrice + 
+                this.customsCalculator.CalculateCustoms(choosenVehicle) +
+                this.surcharge.CalculateSurcharge(choosenVehicle);
+
+            this.view.WriteLine(finalPrice + "$");
         }
     }
 }

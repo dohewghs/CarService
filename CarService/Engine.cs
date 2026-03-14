@@ -19,7 +19,7 @@ namespace CarService
 
         public override string ToString() => $"{Volume}|{Type}";
 
-        public string ToUIString() => $"{Volume} {Type}";
+        public string ToUIString() => $"{Volume}cm3 {Type}";
     }
 
     internal enum EngineType
