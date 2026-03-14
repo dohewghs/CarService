@@ -6,18 +6,20 @@ namespace CarService
 {
     internal class Engine
     {
-        private double volume;
-        private EngineType type;
+        public double Volume { get; private set; }
+        public EngineType Type { get; private set; }
 
         public Engine(double _volume = 0, EngineType _type = EngineType.petrol)
         {
-            this.volume = _volume;
-            this.type = _type;
+            this.Volume = _volume;
+            this.Type = _type;
         }
 
-        public double GetVolume() => this.volume;
+        public double GetVolume() => this.Volume;
 
-        public override string ToString() => $"{volume}|{type}";
+        public override string ToString() => $"{Volume}|{Type}";
+
+        public string ToUIString() => $"{Volume} {Type}";
     }
 
     internal enum EngineType
