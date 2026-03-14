@@ -11,5 +11,6 @@ namespace CarService
         string GetUserInput(string message);
         void DisplayMessageEndl(string message);
         void DisplayMessage(string message);
+        void Clear();
     }
 }
