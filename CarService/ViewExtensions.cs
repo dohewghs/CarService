@@ -28,14 +28,14 @@ namespace CarService
         {
             while (true)
             {
-                view.DisplayMessage(text);
-                string input = view.GetUserInput("");
+                view.Write(text);
+                string input = view.ReadLine("");
                 int value;
                 if (int.TryParse(input, out value))
                 {
                     return value;
                 }
-                view.DisplayMessageEndl("Invalid input. Enter a number");
+                view.WriteLine("Invalid input. Enter a number");
             }
         }
 

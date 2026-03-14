@@ -8,9 +8,9 @@ namespace CarService
 {
     internal interface IView
     {
-        string GetUserInput(string message);
-        void DisplayMessageEndl(string message);
-        void DisplayMessage(string message);
+        string ReadLine(string message);
+        void WriteLine(string message);
+        void Write(string message);
         void Clear();
     }
 }

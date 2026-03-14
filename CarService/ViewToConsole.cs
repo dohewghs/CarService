@@ -13,16 +13,16 @@ namespace CarService
             Console.Clear();
         }
 
-        public void DisplayMessage(string message)
+        public void Write(string message)
         {
             Console.Write(message);
         }
 
-        public void DisplayMessageEndl(string message)
+        public void WriteLine(string message)
         {
             Console.WriteLine(message);
         }
-        public string GetUserInput(string message)
+        public string ReadLine(string message)
         {
             return Console.ReadLine();
         }
