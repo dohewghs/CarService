@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarService
 {
-    internal struct Interval
+    internal class Interval
     {
         public double Lower { get; set; }
         public double Upper { get; set; }
