@@ -8,17 +8,18 @@ namespace CarService
 {
     internal class ViewToConsole : IView
     {
-        public void Write(string text)
+        public void DisplayMessage(string message)
         {
-            Console.Write(text);
+            Console.Write(message);
         }
-        public void WriteLine(string text)
+
+        public void DisplayMessageEndl(string message)
         {
-            Console.WriteLine(text);
+            Console.WriteLine(message);
         }
-        public void Clear()
+        public string GetUserInput(string message)
         {
-            Console.Clear();
+            return Console.ReadLine();
         }
     }
 }

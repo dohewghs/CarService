@@ -9,7 +9,7 @@ namespace CarService
     internal interface IView
     {
         string GetUserInput(string message);
-        void DisplayMessage(string text);
-        void DisplayVehicles(List<Vehicle> vehicles);
+        void DisplayMessageEndl(string message);
+        void DisplayMessage(string message);
     }
 }
