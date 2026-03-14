@@ -8,29 +8,36 @@ namespace CarService
     internal class Menu
     {
         private List<Vehicle> vehicles;
-
+        private CarSelection carSelection;
         public Menu()
         {
             this.vehicles = new List<Vehicle>();
+            this.carSelection = new CarSelection();
         }
         public Menu(List<Vehicle> vehicles)
         {
             this.vehicles = vehicles;
+            this.carSelection = new CarSelection();
         }
 
         public void Run()
         {
+            ReadDataFrom("..\\..\\..\\..\\DataSet.txt");
+
             bool isRunning = true;
 
             while (isRunning)
             {
+                
+
                 ShowOptions();
-                int option = InputOptionInRange(1, 4);
+                int option = Reader.InputOptionInRange(1, 4);
 
                 switch (option)
                 {
                     case 1:
-                        //CarSelection();
+                        Console.Clear();
+                        this.carSelection.Run(this.vehicles);
                         break;
                     case 2:
                         AddCarFromInput();
@@ -46,7 +53,23 @@ namespace CarService
                 }
             }
         }
+        
+        private void ReadDataFrom(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine("File not found!");
+                return;
+            }
 
+            string[] lines = File.ReadAllLines(filePath);
+
+            foreach (string line in lines)
+            {
+                Vehicle vehicle = MakeVehicle(line);
+                this.vehicles.Add(vehicle);
+            }
+        }
         private static void ShowOptions()
         {
             Console.WriteLine("1. Go to car selection.");
@@ -54,66 +77,20 @@ namespace CarService
             Console.WriteLine("3. Show dataset.");
             Console.WriteLine("4. Close program.");
         }
-        private static int InputOptionInRange(int low, int upp)
-        {
-            while (true)
-            {
-                int value = ReadInt("Your option: ");
-
-                if (IsInInterval(value, low, upp))
-                {
-                    return value;
-                }
-
-                Console.WriteLine($"Enter a number in [{low}, {upp}]");
-            }
-
-        }
-        private static int ReadInt(string text)
-        {
-            while (true)
-            {
-                Console.Write(text);
-                string input = Console.ReadLine();
-                int value;
-                if (int.TryParse(input, out value))
-                {
-                    return value;
-                }
-                Console.WriteLine("Invalid input. Enter a number");
-            }
-        }
-        private static double ReadDouble(string text)
-        {
-            while (true)
-            {
-                Console.Write(text);
-                string input = Console.ReadLine();
-                double value;
-                if (double.TryParse(input, out value))
-                {
-                    return value;
-                }
-                Console.WriteLine("Invalid input. Enter a number");
-            }
-        }
-        private static string ReadString(string text)
-        {
-            Console.Write(text);
-            return Console.ReadLine() ?? "";
-        }
-        private static bool IsInInterval(int value, int low, int upp)
-        {
-            return (value >= low && value <= upp);
-        }
-
         private void AddCarFromInput()
         {
             Console.WriteLine("Enter vehicle data (Type|Brand|Model|Year|Price|EngVol|EngType|ExtraField) :");
 
             string line = Console.ReadLine();
 
-            string[] parts = line.Split('|');
+            Vehicle vehicle = MakeVehicle(line);
+
+            this.vehicles.Add(vehicle);
+        }
+
+        private Vehicle MakeVehicle(string str)
+        {
+            string[] parts = str.Split('|');
 
             Vehicle vehicle;
 
@@ -138,15 +115,14 @@ namespace CarService
 
             vehicle.Read(parts);
 
-            this.vehicles.Add(vehicle);
+            return vehicle;
         }
-
         
         private void ShowDataSet()
         {
             foreach (Vehicle vehicle in this.vehicles)
             {
-                Console.WriteLine(vehicle);
+                Console.WriteLine(vehicle.ToUIString());
             }
         }
     }
