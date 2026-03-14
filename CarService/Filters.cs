@@ -26,7 +26,6 @@ namespace CarService
 
             this.view = _view;
         }
-
         public void ShowFilters(string text)
         {
             this.view.WriteLine(text);
@@ -37,9 +36,11 @@ namespace CarService
             this.view.WriteLine($"Engine volume: {this.engVolumeInterval.Lower}-{this.engVolumeInterval.Upper}" );
             this.view.WriteLine($"Price: {this.priceInterval.Lower}-{this.priceInterval.Upper}");
         }
-
         public bool IsSuitable(Vehicle vehicle)
         {
+            if (vehicle == null || vehicle.Engine == null)
+                return false;
+
             if (vehicle == null ||
                 vehicle.Engine.Type != this.engineType ||
                 !this.yearInterval.IsInInterval(vehicle.Year) ||
@@ -96,7 +97,7 @@ namespace CarService
         {
             this.view.Write("Enter Brand: ");
 
-            this.brand = new string(Console.ReadLine());
+            this.brand = this.view.ReadLine();
         }
         private void EnterModel()
         {
@@ -108,7 +109,6 @@ namespace CarService
             this.view.Write("Enter engine type: ");
             this.engineType = Enum.Parse<EngineType>(this.view.ReadLine());
         }
-
         private void EnterInterval(string name, Interval interval)
         {
             this.view.WriteLine($"Current {name}: {interval.Lower}-{interval.Upper}");
@@ -116,7 +116,7 @@ namespace CarService
             this.view.Write($"Enter new interval: ");
             string str = this.view.ReadLine();
 
-            string[] parts = str.Split();
+            string[] parts = str.Split(' ');
 
             int low, high;
             if (parts.Length == 2 &&
@@ -136,7 +136,6 @@ namespace CarService
         {
             this.EnterInterval("Year", this.yearInterval);
         }
-        
         private void EnterVolume()
         {
             this.EnterInterval("Engine volume", this.engVolumeInterval);
