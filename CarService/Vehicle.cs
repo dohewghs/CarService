@@ -10,7 +10,6 @@ namespace CarService
         public string Model { get; private set; }
         public int Year { get; private set; }
         public double BasePrice { get; private set; }
-
         public Engine Engine { get; private set; }
 
         public Vehicle(string _brand = "", string _model = "", int _year = 0, double _basePrice = 0, Engine _engine = null)
@@ -23,16 +22,15 @@ namespace CarService
             this.BasePrice = _basePrice;
         }
 
-
         public virtual string ToFileString()
         {
             return $"{Brand}|{Model}|{Year}|{BasePrice}|{Engine}";
         }
-
         public virtual string ToUIString()
         {
             return $"{Brand} {Model} {Year} {BasePrice}$ {Engine.ToUIString()}";
         }
+
         public void Read(string[] parts)
         {
             if (parts.Length < 7)

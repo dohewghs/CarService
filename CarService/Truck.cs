@@ -18,16 +18,11 @@ namespace CarService
         {
             return base.ToFileString() + $"|{loadCapacity}";
         }
-
-        public override string ToString()
-        {
-            return this.ToFileString();
-        }
-
         public override string ToUIString()
         {
             return base.ToUIString() + " " + this.loadCapacity.ToString();
         }
+
         protected override void MakeFrom(string[] parts)
         {
             base.MakeFrom(parts);

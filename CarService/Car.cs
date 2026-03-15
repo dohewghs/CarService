@@ -10,10 +10,5 @@ namespace CarService
             base(_brand, _model, _year, _basePrice, _engine)
         {
         }
-
-        public override string ToString()
-        {
-            return base.ToFileString();
-        }
     }
 }

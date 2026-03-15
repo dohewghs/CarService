@@ -114,8 +114,8 @@ namespace CarService
             this.view.WriteLine($"Current {name}: {interval.Lower}-{interval.Upper}");
 
             this.view.Write($"Enter new interval: ");
-            string str = this.view.ReadLine();
 
+            string str = this.view.ReadLine();
             string[] parts = str.Split(' ');
 
             int low, high;
@@ -129,7 +129,7 @@ namespace CarService
             }
             else
             {
-                this.view.WriteLine("Format error! Please enter two numbers separated by space.");
+                this.view.WriteLine("Enter two numbers separated by space.");
             }
         }
         private void EnterYear()

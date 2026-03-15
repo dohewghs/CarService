@@ -14,11 +14,7 @@ namespace CarService
             this.Volume = _volume;
             this.Type = _type;
         }
-
-        public double GetVolume() => this.Volume;
-
         public override string ToString() => $"{Volume}|{Type}";
-
         public string ToUIString() => $"{Volume}cm3 {Type}";
     }
 

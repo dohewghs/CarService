@@ -18,7 +18,6 @@ namespace CarService
         {
             return this.Lower <= value && this.Upper >= value;
         }
-
         public bool IsInInterval(double value)
         {
             return this.Lower <= value && this.Upper >= value;

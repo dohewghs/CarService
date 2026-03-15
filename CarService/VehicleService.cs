@@ -15,7 +15,6 @@ namespace CarService
             vehicles = new List<Vehicle>();
         }
         public List<Vehicle> GetAll() => vehicles;
-
         public void LoadFromFile(string filePath)
         {
             if (!File.Exists(filePath)) 
@@ -28,7 +27,6 @@ namespace CarService
                 vehicles.Add(VehicleFactory.Create(line));
             }
         }
-
         public void Add(Vehicle vehicle) => vehicles.Add(vehicle);
     }
 }
