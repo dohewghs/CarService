@@ -12,23 +12,7 @@ namespace CarService
         {
             string[] parts = line.Split('|');
 
-            Vehicle vehicle;
-
-            switch (parts[0].ToLower())
-            {
-                case "car":
-                    vehicle = new Car();
-                    break;
-                case "truck":
-                    vehicle = new Truck();
-                    break;
-                case "mixed":
-                    vehicle = new MixedVehicle();
-                    break;
-                default:
-                    vehicle = null;
-                    break;
-            }
+            Vehicle vehicle = MakeVehicle(parts[0].ToLower());
 
             if (vehicle == null)
                 throw new Exception("Unspecified car type");
@@ -36,6 +20,21 @@ namespace CarService
             vehicle.Read(parts);
 
             return vehicle;
+        }
+
+        public static Vehicle MakeVehicle(string line)
+        {
+            switch (line)
+            {
+                case "car":
+                    return new Car();
+                case "truck":
+                    return new Truck();
+                case "mixed":
+                    return new MixedVehicle();
+                default:
+                    return null;
+            }
         }
     }
 }
