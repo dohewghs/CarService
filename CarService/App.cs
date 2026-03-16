@@ -24,6 +24,8 @@ namespace CarService
 
             while (isRunning)
             {
+                this.view.Clear();
+
                 ShowOptions();
 
                 int option = view.InputOptionInRange(1, 4);
@@ -31,15 +33,15 @@ namespace CarService
                 switch (option)
                 {
                     case 1:
-                        this.view.Clear();
+                        
                         this.carSelection.Run(vehicleService.GetAll());
                         break;
                     case 2:
                         AddCarFromInput();
-                        this.view.Clear();
                         break;
                     case 3:
                         ShowDataSet();
+                        Pause("Press Enter to continue ... ");
                         break;
                     case 4:
                         isRunning = false;
@@ -80,6 +82,13 @@ namespace CarService
             {
                 this.view.WriteLine(vehicle.ToUIString());
             }
+        }
+
+        private void Pause(string text)
+        {
+            this.view.WriteLine("");
+            this.view.WriteLine(text);
+            this.view.ReadLine();
         }
     }
 }
