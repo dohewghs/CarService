@@ -16,7 +16,7 @@ namespace CarService
             if (vehicleAge <= 0)
                 vehicleAge = 1;
 
-            double vehicleEngineVolume = vehicle.Engine.GetVolume();
+            double vehicleEngineVolume = vehicle.Engine.Volume;
 
             double excise = exciseCoefitient * vehicleEngineVolume * vehicleAge;
 
