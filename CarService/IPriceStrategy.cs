@@ -10,4 +10,19 @@ namespace CarService
     {
         double CalculateSurcharge(Vehicle vehicle);
     }
+
+
+    internal class SurchargeStrategyPercent : ISurchargeStrategy
+    {
+        double percent;
+
+        public SurchargeStrategyPercent(double percent = 0.1)
+        {
+            this.percent = percent;
+        }
+        public double CalculateSurcharge(Vehicle vehicle)
+        {
+            return this.percent * vehicle.BasePrice;
+        }
+    }
 }
