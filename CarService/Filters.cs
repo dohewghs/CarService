@@ -145,4 +145,25 @@ namespace CarService
             this.EnterInterval("Price", this.priceInterval);
         }
     }
+
+
+    internal class Interval
+    {
+        public double Lower { get; set; }
+        public double Upper { get; set; }
+
+        public Interval(int low = 0, int upp = 0)
+        {
+            this.Lower = low;
+            this.Upper = upp;
+        }
+        public bool IsInInterval(int value)
+        {
+            return this.Lower <= value && this.Upper >= value;
+        }
+        public bool IsInInterval(double value)
+        {
+            return this.Lower <= value && this.Upper >= value;
+        }
+    }
 }
